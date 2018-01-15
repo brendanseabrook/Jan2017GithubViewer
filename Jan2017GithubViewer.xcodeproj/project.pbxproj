@@ -36,6 +36,7 @@
 		A07A451F200D0AE200DA45DD /* Jan2017GithubViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jan2017GithubViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07A4523200D0AE200DA45DD /* Jan2017GithubViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jan2017GithubViewerTests.swift; sourceTree = "<group>"; };
 		A07A4525200D0AE200DA45DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A07A452E200D0D6000DA45DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 		A07A4502200D0AE100DA45DD = {
 			isa = PBXGroup;
 			children = (
+				A07A452E200D0D6000DA45DD /* README.md */,
 				A07A450D200D0AE100DA45DD /* Jan2017GithubViewer */,
 				A07A4522200D0AE200DA45DD /* Jan2017GithubViewerTests */,
 				A07A450C200D0AE100DA45DD /* Products */,
