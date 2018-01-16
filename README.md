@@ -25,5 +25,5 @@ This project was made as an interview assignment. Provided was a brief set of re
 # Screenshots
 ![Search](https://github.com/brendanseabrook/Jan2017GithubViewer/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-16%20at%2011.54.03.png?raw=true)
 
-![Details](https://github.com/brendanseabrook/Jan2017GithubViewer/blob/master/Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png)
+![Details](https://github.com/brendanseabrook/Jan2017GithubViewer/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-16%20at%2011.54.10.png?raw=true)
     
