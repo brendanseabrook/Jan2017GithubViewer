@@ -21,4 +21,10 @@ This project was made as an interview assignment. Provided was a brief set of re
 * Project was completed in a reasonable amount of time (~3.5 hours total dev time)
     * I did spend learning how to KVO in swift so it would be much faster if I had to repeat
 * MVVM is kinda cool on iOS. I had only used the pattern in ASP.NET land so it was quite refreshing
+
+# Screenshots
+
+![Search](https://github.com/brendanseabrook/Jan2017GithubViewer/blob/master/Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.03.png)
+
+![Details](https://github.com/brendanseabrook/Jan2017GithubViewer/blob/master/Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png)
     
