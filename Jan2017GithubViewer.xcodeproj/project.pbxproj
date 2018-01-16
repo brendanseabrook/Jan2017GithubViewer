@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		A07A450F200D0AE100DA45DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A450E200D0AE100DA45DD /* AppDelegate.swift */; };
-		A07A4511200D0AE100DA45DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4510200D0AE100DA45DD /* ViewController.swift */; };
+		A07A4511200D0AE100DA45DD /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4510200D0AE100DA45DD /* TrendingViewController.swift */; };
 		A07A4514200D0AE100DA45DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A4512200D0AE100DA45DD /* Main.storyboard */; };
 		A07A4516200D0AE100DA45DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07A4515200D0AE100DA45DD /* Assets.xcassets */; };
 		A07A4519200D0AE100DA45DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A4517200D0AE100DA45DD /* LaunchScreen.storyboard */; };
 		A07A4524200D0AE200DA45DD /* Jan2017GithubViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4523200D0AE200DA45DD /* Jan2017GithubViewerTests.swift */; };
+		A07A4531200D2BE200DA45DD /* GithubRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4530200D2BE200DA45DD /* GithubRepo.swift */; };
+		A07A4534200D2CD900DA45DD /* GithubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4533200D2CD900DA45DD /* GithubViewModel.swift */; };
+		A07A4537200D45BE00DA45DD /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4536200D45BE00DA45DD /* TrendingCell.swift */; };
+		A07A4539200D512B00DA45DD /* GithubDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4538200D512B00DA45DD /* GithubDataProvider.swift */; };
+		A07A453B200D6D0300DA45DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A453A200D6D0300DA45DD /* Helpers.swift */; };
+		A07A453F200D860700DA45DD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A453E200D860700DA45DD /* DetailsViewController.swift */; };
+		A07A4544200E65C400DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.03.png in Resources */ = {isa = PBXBuildFile; fileRef = A07A4542200E65C300DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.03.png */; };
+		A07A4545200E65C400DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png in Resources */ = {isa = PBXBuildFile; fileRef = A07A4543200E65C300DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +36,7 @@
 /* Begin PBXFileReference section */
 		A07A450B200D0AE100DA45DD /* Jan2017GithubViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jan2017GithubViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07A450E200D0AE100DA45DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A07A4510200D0AE100DA45DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A07A4510200D0AE100DA45DD /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 		A07A4513200D0AE100DA45DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A07A4515200D0AE100DA45DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A07A4518200D0AE100DA45DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,14 @@
 		A07A4523200D0AE200DA45DD /* Jan2017GithubViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jan2017GithubViewerTests.swift; sourceTree = "<group>"; };
 		A07A4525200D0AE200DA45DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07A452E200D0D6000DA45DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A07A4530200D2BE200DA45DD /* GithubRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepo.swift; sourceTree = "<group>"; };
+		A07A4533200D2CD900DA45DD /* GithubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewModel.swift; sourceTree = "<group>"; };
+		A07A4536200D45BE00DA45DD /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
+		A07A4538200D512B00DA45DD /* GithubDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubDataProvider.swift; sourceTree = "<group>"; };
+		A07A453A200D6D0300DA45DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A07A453E200D860700DA45DD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A07A4542200E65C300DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.03.png"; sourceTree = "<group>"; };
+		A07A4543200E65C300DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,8 @@
 		A07A4502200D0AE100DA45DD = {
 			isa = PBXGroup;
 			children = (
+				A07A4542200E65C300DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.03.png */,
+				A07A4543200E65C300DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png */,
 				A07A452E200D0D6000DA45DD /* README.md */,
 				A07A450D200D0AE100DA45DD /* Jan2017GithubViewer */,
 				A07A4522200D0AE200DA45DD /* Jan2017GithubViewerTests */,
@@ -79,12 +97,15 @@
 		A07A450D200D0AE100DA45DD /* Jan2017GithubViewer */ = {
 			isa = PBXGroup;
 			children = (
+				A07A4535200D2D0B00DA45DD /* View */,
+				A07A4532200D2CB300DA45DD /* ViewModel */,
+				A07A452F200D2BC200DA45DD /* Model */,
 				A07A450E200D0AE100DA45DD /* AppDelegate.swift */,
-				A07A4510200D0AE100DA45DD /* ViewController.swift */,
 				A07A4512200D0AE100DA45DD /* Main.storyboard */,
 				A07A4515200D0AE100DA45DD /* Assets.xcassets */,
 				A07A4517200D0AE100DA45DD /* LaunchScreen.storyboard */,
 				A07A451A200D0AE200DA45DD /* Info.plist */,
+				A07A453A200D6D0300DA45DD /* Helpers.swift */,
 			);
 			path = Jan2017GithubViewer;
 			sourceTree = "<group>";
@@ -96,6 +117,33 @@
 				A07A4525200D0AE200DA45DD /* Info.plist */,
 			);
 			path = Jan2017GithubViewerTests;
+			sourceTree = "<group>";
+		};
+		A07A452F200D2BC200DA45DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A07A4530200D2BE200DA45DD /* GithubRepo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A07A4532200D2CB300DA45DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A07A4533200D2CD900DA45DD /* GithubViewModel.swift */,
+				A07A4538200D512B00DA45DD /* GithubDataProvider.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A07A4535200D2D0B00DA45DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A07A453E200D860700DA45DD /* DetailsViewController.swift */,
+				A07A4510200D0AE100DA45DD /* TrendingViewController.swift */,
+				A07A4536200D45BE00DA45DD /* TrendingCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +229,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07A4544200E65C400DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.03.png in Resources */,
 				A07A4519200D0AE100DA45DD /* LaunchScreen.storyboard in Resources */,
 				A07A4516200D0AE100DA45DD /* Assets.xcassets in Resources */,
+				A07A4545200E65C400DA45DD /* Simulator Screen Shot - iPhone 8 Plus - 2018-01-16 at 11.54.10.png in Resources */,
 				A07A4514200D0AE100DA45DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,8 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A07A4511200D0AE100DA45DD /* ViewController.swift in Sources */,
+				A07A4511200D0AE100DA45DD /* TrendingViewController.swift in Sources */,
+				A07A453B200D6D0300DA45DD /* Helpers.swift in Sources */,
+				A07A4531200D2BE200DA45DD /* GithubRepo.swift in Sources */,
+				A07A453F200D860700DA45DD /* DetailsViewController.swift in Sources */,
+				A07A4537200D45BE00DA45DD /* TrendingCell.swift in Sources */,
+				A07A4539200D512B00DA45DD /* GithubDataProvider.swift in Sources */,
 				A07A450F200D0AE100DA45DD /* AppDelegate.swift in Sources */,
+				A07A4534200D2CD900DA45DD /* GithubViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
