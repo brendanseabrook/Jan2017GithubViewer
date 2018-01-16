@@ -25,7 +25,7 @@ class DetailsViewController : UIViewController {
         self.repoDescription.text = viewModel.repoDescription
         
         segment.backgroundColor = UIColor.white
-        segment.frame = CGRect(x: segment.frame.origin.x, y: segment.frame.origin.y, width: segment.frame.width, height: 50)
+        //segment.frame = CGRect(x: segment.frame.origin.x, y: segment.frame.origin.y, width: segment.frame.width, height: 50)
         segment.setTitle(viewModel.starsLabel, forSegmentAt: 0)
         segment.setTitle(viewModel.forksLabel, forSegmentAt: 1)
         
