@@ -11,11 +11,13 @@ import Foundation
 class GithubDataProvider : NSObject {
     public static let shared = GithubDataProvider()
     
-    private var config: URLSessionConfiguration!
+    private let config: URLSessionConfiguration
+    private let dateConfig: DateFormatter
     
     override init() {
         config = URLSessionConfiguration.default
-        config.httpAdditionalHeaders = [:]
+        dateConfig = DateFormatter()
+        dateConfig.dateFormat = "YYYY-MM-dd"
     }
     
     @objc dynamic var trending:[GithubRepoViewModel] = []
@@ -29,13 +31,16 @@ class GithubDataProvider : NSObject {
     
     @objc dynamic var error:String = "" //Not ideal but Error enum not workable with @objc
     
-    public func updateTrending() {
+    public func updateTrending(onTerm:String) {
+        
+        let sevenDaysAgo = Date().addingTimeInterval(-7*24*60*60)
+        print("created:>\(dateConfig.string(from: sevenDaysAgo))")
+        
         guard let url = URL(string: "https://api.github.com/search/repositories", queryComponents:
         [
             "sort":"stars",
             "order":"desc",
-            "q":"swift"
-            //TODO add date range
+            "q":onTerm + " created:>\(dateConfig.string(from: sevenDaysAgo))",
         ]) else {
             //TODO Log and return
             return

@@ -86,22 +86,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Github Trends" id="gXP-is-dsA"/>
+                    <navigationItem key="navigationItem" title="Github Trends" id="gXP-is-dsA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="qae-30-ohV"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="0UT-Q5-M4o" id="2j7-Jl-nbh"/>
+                        <outlet property="searchBar" destination="bmK-l6-mi8" id="KgU-5u-gKF"/>
                         <outlet property="tableView" destination="hGh-sr-xeJ" id="Vgo-Sz-Rpc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="0UT-Q5-M4o">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="Og8-2B-2lT"/>
-                        <outlet property="searchBar" destination="bmK-l6-mi8" id="hMN-DC-X2q"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="nvx-xk-dul"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="nkk-aS-kkK"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="jMv-ZE-ZIG"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="479.19999999999999" y="132.68365817091455"/>
         </scene>

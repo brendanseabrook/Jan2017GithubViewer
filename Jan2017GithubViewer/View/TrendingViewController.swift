@@ -8,9 +8,10 @@
 
 import UIKit
 
-class TrendingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TrendingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet var tableView:UITableView!
+    @IBOutlet var searchBar:UISearchBar!
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -20,10 +21,12 @@ class TrendingViewController: UIViewController, UITableViewDelegate, UITableView
                 self.tableView.reloadData()
             }
         }
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
-        
-        GithubDataProvider.shared.updateTrending()
+    }
+    
+    override func viewDidLoad() {
+        //Code for demo purposes only
+        searchBar.text = "Swift"
+        self.searchBarSearchButtonClicked(searchBar)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,6 +51,14 @@ class TrendingViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    //MARK:- Search Bar operations
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let term = searchBar.text else {
+            return
+        }
+        GithubDataProvider.shared.updateTrending(onTerm: term)
     }
 }
 
