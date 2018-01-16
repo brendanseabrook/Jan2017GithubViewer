@@ -12,4 +12,3 @@ This project was made as an interview assignment. Provided was a brief set of re
 * I'm not going to care how this gets displayed on iPad
 * They seem to be very focused on MVVM so thats what we will be using
 * The search will be a server side call rather than a local filter
-
