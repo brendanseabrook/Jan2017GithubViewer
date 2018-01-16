@@ -15,12 +15,18 @@ class GithubDataProvider : NSObject {
     
     override init() {
         config = URLSessionConfiguration.default
-        config.httpAdditionalHeaders = [:
-//            "Authorization": "Bearer " + "qY92NeZMw__mYbfUN4gx_Naul1EZhy-Is3HHwL1-f9XB2VL_rb0ryDrd8iGDFslU4LAiKKwChj_tOahwW_aka1kDIQlW-InHxEZG9J3rL69I85rqrHW52KTjB3VYWnYx"
-        ]
+        config.httpAdditionalHeaders = [:]
     }
     
     @objc dynamic var trending:[GithubRepoViewModel] = []
+    private var trendingObserver:NSKeyValueObservation?
+    func bindToTrending(onChange:@escaping ()->Void) {
+        trendingObserver = self.observe(\.trending, changeHandler: { (model, change) in
+            onChange()
+        })
+    }
+    
+    
     @objc dynamic var error:String = "" //Not ideal but Error enum not workable with @objc
     
     public func updateTrending() {
@@ -57,5 +63,52 @@ class GithubDataProvider : NSObject {
             })
         })
         dataTask.resume()
+    }
+    
+    private func updatePortrait(repo:GithubRepoViewModel) {
+        guard let portraitURLString = repo.portraitURL else {
+            return
+        }
+        
+        guard let portraitURL = URL(string: portraitURLString) else {
+            return
+        }
+        
+        let session = URLSession(configuration: self.config)
+        let portraitTask = session.dataTask(with: portraitURL, completionHandler: { (data, response, error) in
+            if data == nil || error != nil || (response as? HTTPURLResponse)?.statusCode != 200 {
+                //TODO Log and return
+                return
+            }
+            
+            repo.forModelObject.portrait = NSData(data: data!)
+        })
+        portraitTask.resume()
+    }
+    
+    private func updateReadme(repo:GithubRepoViewModel) {
+        guard let readmeURLString = repo.readmeURL else {
+            return
+        }
+        
+        guard let readmeURL = URL(string: readmeURLString) else {
+            return
+        }
+        
+        let session = URLSession(configuration: self.config)
+        let readmeTask = session.dataTask(with: readmeURL, completionHandler: { (data, response, error) in
+            if data == nil || error != nil || (response as? HTTPURLResponse)?.statusCode != 200 {
+                //TODO Log and return
+                return
+            }
+            
+            repo.forModelObject.readme = NSData.init(data: data!)
+        })
+        readmeTask.resume()
+    }
+    
+    public func updateRepo(repo:GithubRepoViewModel) {
+        updatePortrait(repo: repo)
+        updateReadme(repo: repo)
     }
 }

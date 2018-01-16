@@ -10,6 +10,9 @@ import Foundation
 
 class GithubRepo : NSObject {
     var record:[String:Any]
+    //Cant use swift native struct here, not KVO
+    @objc dynamic var portrait:NSData?
+    @objc dynamic var readme:NSData?
     
     init(forRecord:[String:Any]) {
         record = forRecord

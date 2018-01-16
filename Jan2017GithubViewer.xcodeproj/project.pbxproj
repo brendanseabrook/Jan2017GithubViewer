@@ -18,6 +18,7 @@
 		A07A4537200D45BE00DA45DD /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4536200D45BE00DA45DD /* TrendingCell.swift */; };
 		A07A4539200D512B00DA45DD /* GithubDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A4538200D512B00DA45DD /* GithubDataProvider.swift */; };
 		A07A453B200D6D0300DA45DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A453A200D6D0300DA45DD /* Helpers.swift */; };
+		A07A453F200D860700DA45DD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A453E200D860700DA45DD /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A07A4536200D45BE00DA45DD /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		A07A4538200D512B00DA45DD /* GithubDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubDataProvider.swift; sourceTree = "<group>"; };
 		A07A453A200D6D0300DA45DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A07A453E200D860700DA45DD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		A07A4535200D2D0B00DA45DD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A07A453E200D860700DA45DD /* DetailsViewController.swift */,
 				A07A4510200D0AE100DA45DD /* TrendingViewController.swift */,
 				A07A4536200D45BE00DA45DD /* TrendingCell.swift */,
 			);
@@ -243,6 +246,7 @@
 				A07A4511200D0AE100DA45DD /* TrendingViewController.swift in Sources */,
 				A07A453B200D6D0300DA45DD /* Helpers.swift in Sources */,
 				A07A4531200D2BE200DA45DD /* GithubRepo.swift in Sources */,
+				A07A453F200D860700DA45DD /* DetailsViewController.swift in Sources */,
 				A07A4537200D45BE00DA45DD /* TrendingCell.swift in Sources */,
 				A07A4539200D512B00DA45DD /* GithubDataProvider.swift in Sources */,
 				A07A450F200D0AE100DA45DD /* AppDelegate.swift in Sources */,

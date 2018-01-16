@@ -10,27 +10,26 @@ import UIKit
 
 class TrendingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var observation:NSKeyValueObservation?
     @IBOutlet var tableView:UITableView!
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
-        observation = GithubDataProvider.shared.observe(\.trending) {[weak self] ( vm, change) in
+        
+        GithubDataProvider.shared.bindToTrending {
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        
         GithubDataProvider.shared.updateTrending()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "details" {
+            (segue.destination as? DetailsViewController)?.viewModel = (sender as! TrendingCell).toPass
+        }
     }
     
     //MARK:- Table view operations
@@ -41,8 +40,14 @@ class TrendingViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TrendingCell.reuse) as! TrendingCell
-        cell.name.text = GithubDataProvider.shared.trending[indexPath.row].name
+        
+        cell.decorate(data: GithubDataProvider.shared.trending[indexPath.row])
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
 }
 
