@@ -16,6 +16,7 @@ This project was made as an interview assignment. Provided was a brief set of re
 * Im not going to render the markdown
 * Not going to worry about cache invalidation
 * I'm not going to track down the image or unicode you have for forks. Its not an easy one to find and its not what github uses themselves
+* I've decided not to write unit tests. The app is so small that testing the data provider would simply be testing the status code
 
 ## Conclusion
 * Project was completed in a reasonable amount of time (~3.5 hours total dev time)
